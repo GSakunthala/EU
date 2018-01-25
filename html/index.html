@@ -2021,6 +2021,14 @@
         // initialization of go to section
         $.HSCore.components.HSGoTo.init('.js-go-to');
 
+        //initialization of tabs
+        $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+        $('#processes [role="tablist"] .nav-link').on('click', function () {
+          setTimeout(function () {
+            $('#processesTabs .js-carousel').slick('setPosition');
+          }, 200);
+        });
         // initialization of counters
         var counters = $.HSCore.components.HSCounter.init('[class*="js-counter"]');
 
